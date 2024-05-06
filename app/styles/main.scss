@@ -1,0 +1,12 @@
+.main-page {
+    background-color: #222;
+    &__title {
+        color: #fafafa;
+    }
+    &__img {
+        img {
+            display: block; 
+            width: 100%; height: 100%;
+        }
+    }
+}
