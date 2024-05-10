@@ -209,7 +209,7 @@ export const SecondSlide = ({handleSetActive}) => {
           <div className="second-slide__question">
             {/* <p>Kyllä, se yksi uusi framework</p> */}
             <div className="second-slide__img">
-              <img src="/public/img/pokemon.webp" alt="" />
+              <img src="/img/pokemon.webp" alt="" />
             </div>
         </div>
         )}
@@ -230,7 +230,7 @@ export const SecondSlide = ({handleSetActive}) => {
         {hidePay && (
           <div className="second-slide__pay">
             <div className="second-slide__pay-img">
-              <img src="/public/img/pay-method.png" alt="" />
+              <img src="/img/pay-method.png" alt="" />
             </div>
             <Link 
               className="pay-later-button"
@@ -267,7 +267,7 @@ export const ThirdSlide = ({handleSetActive}) => {
         </div> */}
         <h2 className="third-slide__title">Aivan oikein, se on another JS framework!</h2>
         <div className="third-slide__img-no">
-          <img src="/public/img/no-meme.gif" alt="" />
+          <img src="/img/no-meme.gif" alt="" />
         </div>
         <Link 
             className="third-slide__button"
@@ -293,7 +293,7 @@ export const FourthSlide = ({handleSetActive}) => {
   return (
     <Element name="fourth-slide" className="fourth-slide">
       <div onClick={() => handleStart()} className="fourth-slide__img">
-        <img src="/public/img/js-framework-0.png" alt="" />
+        <img src="/img/js-framework-0.png" alt="" />
       </div>        
       <div className="counters">
         <Counter 
@@ -336,7 +336,7 @@ const FifthSlide = ({handleSetActive}) => {
     <Element name="fifth-slide" className="fifth-slide">
       <button className="fifth-slide__button translate-button " onClick={() => handleTranslate()}>{(!title && !text) ? "English" : "Finnish"}</button>
       <div className="fifth-slide__img">
-        <img src="/public/img/remix-logo.png" alt="" />
+        <img src="/img/remix-logo.png" alt="" />
       </div>
       <h2 className="fifth-slide__title">
         {!title ?
@@ -409,7 +409,7 @@ const SeventhSlide = ({handleSetActive}) => {
   return (
     <Element name="seventh-slide" className="seventh-slide">
       <div className="seventh-slide__img">
-        <img src="/public/img/lair.jpg" alt="" />
+        <img src="/img/lair.jpg" alt="" />
       </div>
       <div className="seventh-slide__title">ilman roskaa...</div>
       <div className="seventh-slide__subtitle">Minä uskoin...</div>
@@ -464,7 +464,7 @@ const NinthSlide = ({handleSetActive}) => {
   return (
     <Element name="ninth-slide" className="ninth-slide">
       <div className="ninth-slide__img">
-        <img src="/public/img/19fq7c002w021.png" alt="" />
+        <img src="/img/19fq7c002w021.png" alt="" />
       </div>
       <div className="ninth-slide__title">Miten aloittaa?</div>
       <div className="ninth-slide__code">npx <span>create-remix@latest</span></div>
@@ -490,7 +490,7 @@ const TenthSlide = ({handleSetActive}) => {
   return (
     <Element name="tenth-slide" className="tenth-slide">
       <div className="tenth-slide__img">
-        <img src="/public/img/19.webp" alt="" />
+        <img src="/img/19.webp" alt="" />
       </div>
       <RunAwayButton />
       <Link 
@@ -512,7 +512,7 @@ const EleventhSlide = ({handleSetActive}) => {
   return (
     <Element name="eleventh-slide" className="eleventh-slide">
       <div className="eleventh-slide__img">
-        <img src="/public/img/kissa.jpg" alt="" />
+        <img src="/img/kissa.jpg" alt="" />
       </div>
       <div className="eleventh-slide__title">Kiitos! ✨</div>
     </Element>
