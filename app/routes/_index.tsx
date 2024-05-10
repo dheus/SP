@@ -168,14 +168,14 @@ export const SecondSlide = ({handleSetActive}) => {
   const questionHandler = () => {
     setHideQuestion(true); //hide question
     setCountdownComplete(false);
-    setHideCount(true)
     const intervalId = setInterval(() => {
       setActiveIndex(prevIndex => {
         if (prevIndex === 5) {
           clearInterval(intervalId); // Stop the interval if activeIndex reaches 5
           setCountdownComplete(true);
-          setHideCount(false);
-          setHidePay(true); // Set hidePay to true when activeIndex is 5
+          setHideCount(true);
+          // setHidePay(true); // Set hidePay to true when activeIndex is 5
+          console.log("question", hideQuestion, "count:", hideCount, "pay:", hidePay)
           return prevIndex; // Return the same index
         } else {
           return prevIndex + 1; // Increment index if it's not 5 yet
@@ -196,11 +196,11 @@ export const SecondSlide = ({handleSetActive}) => {
           <img src="/public/img/pay-method.png" alt="" />
         </div>
       </div> */}
-      <h2 className={`second-slide__title ${hidePay && 'pay'}`}>
+      <h2 className={`second-slide__title ${hideQuestion && hideCount && !hidePay  && 'pay'}`}>
         <span>
           {!hideQuestion && 'Mitä tämä on?'}
-          {(hideQuestion && hideCount) && 'On the count of five...'}
-          {(hideQuestion && hideCount && hidePay ) && 'Maksa 100€, kiitos'}
+          {(hideQuestion && !hideCount) && 'On the count of five...'}
+          {(hideQuestion && hideCount && !hidePay ) && 'Jos haluat tietää, maksa 100€, kiitos'}
         </span>
       </h2>
       <div className="second-slide__wrapper">
@@ -214,7 +214,7 @@ export const SecondSlide = ({handleSetActive}) => {
         </div>
         )}
         {/* answer */}
-        {hideCount && (
+        {hideQuestion && !hideCount && (
           <div className="second-slide__count" >
             {items.map((item, index) => (
               <div
@@ -227,7 +227,7 @@ export const SecondSlide = ({handleSetActive}) => {
           </div>
         )}
         {/* pay me */}
-        {hidePay && (
+        {hideQuestion && hideCount && !hidePay  && (
           <div className="second-slide__pay">
             <div className="second-slide__pay-img">
               <img src="/img/pay-method.png" alt="" />
